@@ -1,5 +1,64 @@
 # Spacelift Self-Hosted Installation Checklist
 
+## Table of Contents / Checklist
+
+Use this table of contents to track your progress through the installation. Check off items as you complete them.
+
+### Phase 1: Pre-requisites
+- [ ] [Obtain License Key and Installation Materials](#obtain-license-key-and-installation-materials)
+- [ ] [Choose Hostnames](#choose-hostnames)
+- [ ] [Prepare TLS Certificate](#prepare-tls-certificate)
+
+### Phase 2: External Dependencies
+- [ ] [PostgreSQL Database (Required)](#postgresql-database-required)
+- [ ] [Object Storage (Required)](#object-storage-required)
+- [ ] [Encryption (Configurable)](#encryption-configurable)
+- [ ] [Message Queue (Configurable)](#message-queue-configurable)
+- [ ] [MQTT Broker (Configurable)](#mqtt-broker-configurable)
+
+### Phase 3: Infrastructure Deployment
+- [ ] [Configure Networking](#configure-networking)
+- [ ] [Deploy Infrastructure via Terraform](#deploy-infrastructure-via-terraform)
+- [ ] [Setup Container Registry and Push Images](#setup-container-registry-and-push-images)
+
+### Phase 4: Deploy Spacelift Application
+- [ ] [Kubernetes Deployments (EKS/GKE/AKS/On-Prem)](#kubernetes-deployments-eksgkeakson-prem)
+  - [ ] [Configure kubectl credentials](#configure-kubectl-credentials)
+  - [ ] [Create Kubernetes namespace](#create-kubernetes-namespace)
+  - [ ] [Install ingress controller](#install-ingress-controller)
+  - [ ] [Install cert-manager (if using Let's Encrypt)](#install-cert-manager-if-using-lets-encrypt)
+  - [ ] [Create ClusterIssuer (for Let's Encrypt)](#create-clusterissuer-for-lets-encrypt)
+  - [ ] [Create Kubernetes secrets](#create-kubernetes-secrets)
+  - [ ] [Deploy via Helm chart](#deploy-via-helm-chart)
+- [ ] [ECS Deployment](#ecs-deployment) *(if applicable)*
+
+### Phase 5: DNS Configuration
+- [ ] [Configure DNS Records](#phase-5-dns-configuration)
+
+### Phase 6: First Setup
+- [ ] [Login with admin credentials](#login-with-admin-credentials)
+- [ ] [Create account](#create-account)
+- [ ] [Configure SSO/IdP (optional)](#configure-ssoidp-optional)
+- [ ] [Setup VCS integration](#setup-vcs-integration)
+- [ ] [Create worker pool](#create-worker-pool)
+- [ ] [Disable admin login (optional)](#disable-admin-login-optional)
+
+### Phase 7: Validation
+- [ ] [Verify Spacelift UI loads](#phase-7-validation)
+- [ ] [Verify workers connect](#phase-7-validation)
+- [ ] [Create test stack](#phase-7-validation)
+- [ ] [Trigger a run](#phase-7-validation)
+
+### Phase 8: Optional Integrations
+- [ ] [Observability](#observability)
+- [ ] [Telemetry](#telemetry)
+- [ ] [Slack Integration](#slack-integration)
+- [ ] [Cloud Integrations (OIDC)](#cloud-integrations-oidc)
+- [ ] [Usage Reporting](#usage-reporting)
+- [ ] [Disaster Recovery](#disaster-recovery)
+
+---
+
 ## Phase 1: Pre-requisites
 
 ### Obtain License Key and Installation Materials
