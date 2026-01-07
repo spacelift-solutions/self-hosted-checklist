@@ -649,7 +649,7 @@ After logging in, choose an account name. This is used for:
 
 ### Configure SSO/IdP (optional)
 
-[Login Policy](https://docs.spacelift.io/self-hosted/latest/concepts/policy/login-policy) 🚀
+[User Management](https://docs.spacelift.io/self-hosted/latest/concepts/user-management) 🚀 (recommended) | [Login Policy](https://docs.spacelift.io/self-hosted/latest/concepts/policy/login-policy) 🚀 (advanced)
 
 Spacelift supports SSO via:
 
@@ -657,6 +657,10 @@ Spacelift supports SSO via:
 - OpenID Connect (OIDC)
 - GitHub OAuth
 - GitLab OAuth
+
+**User Management** is the recommended approach for configuring SSO and managing user access. It provides a UI-driven experience for setting up identity providers and controlling who can access your Spacelift installation.
+
+**Login Policies** offer more advanced control through policy-as-code, allowing you to write custom rules for authentication decisions. Use this if you need complex conditional logic beyond what User Management provides.
 
 Configure in **Settings > Single Sign-On** after initial setup.
 
