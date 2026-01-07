@@ -1,5 +1,7 @@
 # Spacelift Self-Hosted Installation Checklist
 
+> **Link Legend:** 🚀 Spacelift documentation | 🔗 External documentation (leaves GitHub)
+
 ## Table of Contents / Checklist
 
 Use this table of contents to track your progress through the installation. Check off items as you complete them.
@@ -75,7 +77,7 @@ Contact your Spacelift sales representative to receive:
 
 ### Choose Hostnames
 
-[Environment Requirements: Choose Your Hostnames](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/environment-requirements#choose-your-hostnames)
+[Environment Requirements: Choose Your Hostnames](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/environment-requirements#choose-your-hostnames) 🚀
 
 Spacelift requires two hostnames to operate:
 
@@ -94,8 +96,8 @@ Spacelift requires two hostnames to operate:
 
 ### Prepare TLS Certificate
 
-- [EKS: Server Certificate](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks#server-certificate)
-- [ECS: Server Certificate](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-ecs#server-certificate)
+- [EKS: Server Certificate](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks#server-certificate) 🚀
+- [ECS: Server Certificate](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-ecs#server-certificate) 🚀
 
 The TLS certificate secures HTTPS access to the Spacelift server. It must be valid for your **server hostname** (e.g., `spacelift.example.com`).
 
@@ -114,20 +116,20 @@ The TLS certificate secures HTTPS access to the Spacelift server. It must be val
 
 | Platform | Recommended Approach | Docs |
 |----------|---------------------|------|
-| AWS (EKS/ECS) | [AWS Certificate Manager (ACM)](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html) - provision before deployment, must be *Issued* | [EKS guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks#server-certificate) |
-| GKE | [Let's Encrypt via cert-manager](https://cert-manager.io/docs/configuration/acme/) - auto-provisioned during deployment | [GKE cert-manager setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke#cert-manager) |
-| AKS | [Let's Encrypt via cert-manager](https://cert-manager.io/docs/configuration/acme/) - auto-provisioned during deployment | [AKS cert-manager setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks#cert-manager) |
-| On-prem | Bring your own certificate or use [cert-manager](https://cert-manager.io/) | [On-prem guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-onprem) |
+| AWS (EKS/ECS) | [AWS Certificate Manager (ACM)](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html) 🔗 - provision before deployment, must be *Issued* | [EKS guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks#server-certificate) 🚀 |
+| GKE | [Let's Encrypt via cert-manager](https://cert-manager.io/docs/configuration/acme/) 🔗 - auto-provisioned during deployment | [GKE cert-manager setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke#cert-manager) 🚀 |
+| AKS | [Let's Encrypt via cert-manager](https://cert-manager.io/docs/configuration/acme/) 🔗 - auto-provisioned during deployment | [AKS cert-manager setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks#cert-manager) 🚀 |
+| On-prem | Bring your own certificate or use [cert-manager](https://cert-manager.io/) 🔗 | [On-prem guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-onprem) 🚀 |
 
 ---
 
 ## Phase 2: External Dependencies
 
-[External Dependencies Overview](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/external-dependencies)
+[External Dependencies Overview](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/external-dependencies) 🚀
 
 ### PostgreSQL Database (Required)
 
-[Database Requirements](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/external-dependencies#database)
+[Database Requirements](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/external-dependencies#database) 🚀
 
 Spacelift stores all application data in PostgreSQL, including:
 
@@ -157,10 +159,10 @@ Spacelift stores all application data in PostgreSQL, including:
 
 | Platform | Managed Service | Docs |
 |----------|----------------|------|
-| AWS | [Amazon RDS for PostgreSQL](https://aws.amazon.com/rds/postgresql/) | [RDS PostgreSQL docs](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html) |
-| AWS | [Amazon Aurora PostgreSQL](https://aws.amazon.com/rds/aurora/) (Serverless v2 supported) | [Aurora PostgreSQL docs](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.AuroraPostgreSQL.html) |
-| GCP | [Google Cloud SQL for PostgreSQL](https://cloud.google.com/sql/docs/postgres) | [Cloud SQL docs](https://cloud.google.com/sql/docs/postgres/create-instance) |
-| Azure | [Azure Database for PostgreSQL Flexible Server](https://azure.microsoft.com/en-us/products/postgresql) | [Azure PostgreSQL docs](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/overview) |
+| AWS | [Amazon RDS for PostgreSQL](https://aws.amazon.com/rds/postgresql/) 🔗 | [RDS PostgreSQL docs](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html) 🔗 |
+| AWS | [Amazon Aurora PostgreSQL](https://aws.amazon.com/rds/aurora/) 🔗 (Serverless v2 supported) | [Aurora PostgreSQL docs](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.AuroraPostgreSQL.html) 🔗 |
+| GCP | [Google Cloud SQL for PostgreSQL](https://cloud.google.com/sql/docs/postgres) 🔗 | [Cloud SQL docs](https://cloud.google.com/sql/docs/postgres/create-instance) 🔗 |
+| Azure | [Azure Database for PostgreSQL Flexible Server](https://azure.microsoft.com/en-us/products/postgresql) 🔗 | [Azure PostgreSQL docs](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/overview) 🔗 |
 | On-prem | Self-managed PostgreSQL | Not recommended to run in Kubernetes - use persistent volumes if you must |
 
 **Terraform module behavior:**
@@ -174,7 +176,7 @@ Spacelift stores all application data in PostgreSQL, including:
 
 ### Object Storage (Required)
 
-[Object Storage Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/object-storage)
+[Object Storage Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/object-storage) 🚀
 
 Spacelift requires object storage to persist files including:
 
@@ -191,10 +193,10 @@ Spacelift requires object storage to persist files including:
 
 | Provider | Authentication | Docs |
 |----------|---------------|------|
-| Amazon S3 | IAM roles (EKS/ECS), access keys, instance profiles | [S3 Configuration](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/object-storage#amazon-s3) |
-| Google Cloud Storage | Workload Identity, service account keys, Application Default Credentials | [GCS Configuration](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/object-storage#google-cloud-storage) |
-| Azure Blob Storage | Workload Identity, managed identity, connection strings | [Azure Blob Configuration](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/object-storage#azure-blob-storage) |
-| MinIO | S3-compatible API with access keys | [MinIO Configuration](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/object-storage#minio) |
+| Amazon S3 | IAM roles (EKS/ECS), access keys, instance profiles | [S3 Configuration](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/object-storage#amazon-s3) 🚀 |
+| Google Cloud Storage | Workload Identity, service account keys, Application Default Credentials | [GCS Configuration](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/object-storage#google-cloud-storage) 🚀 |
+| Azure Blob Storage | Workload Identity, managed identity, connection strings | [Azure Blob Configuration](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/object-storage#azure-blob-storage) 🚀 |
+| MinIO | S3-compatible API with access keys | [MinIO Configuration](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/object-storage#minio) 🚀 |
 
 **Buckets created by Terraform modules:**
 
@@ -213,7 +215,7 @@ Spacelift requires object storage to persist files including:
 
 ### Encryption (Configurable)
 
-[Encryption Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/encryption)
+[Encryption Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/encryption) 🚀
 
 Spacelift encrypts sensitive data stored in the database to prevent plaintext storage of secrets. Encryption is also used for signing JWT tokens for user sessions and API authentication.
 
@@ -230,8 +232,8 @@ Spacelift encrypts sensitive data stored in the database to prevent plaintext st
 
 | Option | Best For | How It Works | Docs |
 |--------|----------|--------------|------|
-| **AWS KMS** | AWS deployments (EKS/ECS) | Uses KMS keys for encryption and signing; keys never leave AWS | [KMS setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/encryption#kms) |
-| **RSA (built-in)** | GKE, AKS, on-prem | You generate an RSA private key and pass it via environment variable | [RSA key generation](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/encryption#rsa) |
+| **AWS KMS** | AWS deployments (EKS/ECS) | Uses KMS keys for encryption and signing; keys never leave AWS | [KMS setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/encryption#kms) 🚀 |
+| **RSA (built-in)** | GKE, AKS, on-prem | You generate an RSA private key and pass it via environment variable | [RSA key generation](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/encryption#rsa) 🚀 |
 
 **KMS (AWS) details:**
 
@@ -251,7 +253,7 @@ Spacelift encrypts sensitive data stored in the database to prevent plaintext st
 
 ### Message Queue (Configurable)
 
-[Message Queues Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/message-queues)
+[Message Queues Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/message-queues) 🚀
 
 Spacelift uses message queues for asynchronous job processing:
 
@@ -262,8 +264,8 @@ Spacelift uses message queues for asynchronous job processing:
 
 | Option | Best For | How It Works | Docs |
 |--------|----------|--------------|------|
-| **Built-in (PostgreSQL-based)** | **Recommended for all new installations** | Uses PostgreSQL tables as a queue; no additional infrastructure | [Built-in setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/message-queues#built-in) |
-| **AWS SQS** | Existing installations, or if you prefer managed queues | Creates SQS queues for each message type | [SQS setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/message-queues#sqs) |
+| **Built-in (PostgreSQL-based)** | **Recommended for all new installations** | Uses PostgreSQL tables as a queue; no additional infrastructure | [Built-in setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/message-queues#built-in) 🚀 |
+| **AWS SQS** | Existing installations, or if you prefer managed queues | Creates SQS queues for each message type | [SQS setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/message-queues#sqs) 🚀 |
 
 **Built-in queue details:**
 
@@ -283,7 +285,7 @@ Spacelift uses message queues for asynchronous job processing:
 
 ### MQTT Broker (Configurable)
 
-[MQTT Broker Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/mqtt-broker)
+[MQTT Broker Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/mqtt-broker) 🚀
 
 The MQTT broker enables server-to-worker communication. It's used for:
 
@@ -295,8 +297,8 @@ Workers connect to the MQTT broker to receive real-time messages from the server
 
 | Option | Best For | How It Works | Docs |
 |--------|----------|--------------|------|
-| **Built-in** | **Recommended for most deployments** | MQTT broker runs embedded in the Spacelift server process | [Built-in MQTT setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/mqtt-broker#built-in) |
-| **AWS IoT Core** | Large-scale AWS deployments needing managed MQTT | Uses AWS IoT Core as external broker | [IoT Core setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/mqtt-broker#iot-core) |
+| **Built-in** | **Recommended for most deployments** | MQTT broker runs embedded in the Spacelift server process | [Built-in MQTT setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/mqtt-broker#built-in) 🚀 |
+| **AWS IoT Core** | Large-scale AWS deployments needing managed MQTT | Uses AWS IoT Core as external broker | [IoT Core setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/mqtt-broker#iot-core) 🚀 |
 
 **Built-in broker details:**
 
@@ -316,11 +318,11 @@ Workers connect to the MQTT broker to receive real-time messages from the server
 
 ## Phase 3: Infrastructure Deployment
 
-[Environment Requirements](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/environment-requirements)
+[Environment Requirements](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/environment-requirements) 🚀
 
 ### Configure Networking
 
-[Networking Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/networking)
+[Networking Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/networking) 🚀
 
 Spacelift consists of three main backend services plus workers. Each has specific networking requirements.
 
@@ -333,14 +335,14 @@ Spacelift consists of three main backend services plus workers. Each has specifi
 | **Scheduler** | Cron job triggering | No | Database, message queue |
 | **Workers** | Run execution | No | Server, MQTT broker, object storage, VCS, infrastructure APIs |
 
-**Server ingress** - [Server Networking](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/networking#server):
+**Server ingress** - [Server Networking](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/networking#server) 🚀:
 
 | Port | Protocol | Purpose |
 |------|----------|---------|
 | 1983 | TCP/HTTP | Web UI, GraphQL API, REST API, VCS webhooks |
 | 1984 | TCP/MQTT | Worker communication (built-in MQTT broker) |
 
-**Server egress** - [Server Networking](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/networking#server):
+**Server egress** - [Server Networking](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/networking#server) 🚀:
 
 | Destination | Port | Required |
 |-------------|------|----------|
@@ -351,7 +353,7 @@ Spacelift consists of three main backend services plus workers. Each has specifi
 | AWS IoT Core | 443 | Only if using IoT Core |
 | AWS KMS | 443 | Only if using KMS encryption |
 
-**Worker egress** - [Worker Networking](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/networking#workers):
+**Worker egress** - [Worker Networking](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/networking#workers) 🚀:
 
 | Destination | Port | Required |
 |-------------|------|----------|
@@ -387,10 +389,10 @@ Each platform has a Terraform module that deploys:
 
 | Platform | Terraform Module | What It Creates | Deployment Guide |
 |----------|-----------------|-----------------|------------------|
-| AWS EKS | [terraform-aws-eks-spacelift-selfhosted](https://github.com/spacelift-io/terraform-aws-eks-spacelift-selfhosted) | EKS cluster, Aurora PostgreSQL, S3 buckets, KMS keys, ECR, VPC, ALB/NLB | [EKS Guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks) |
-| AWS ECS | [terraform-aws-spacelift-selfhosted](https://github.com/spacelift-io/terraform-aws-spacelift-selfhosted) (infra) + [terraform-aws-ecs-spacelift-selfhosted](https://github.com/spacelift-io/terraform-aws-ecs-spacelift-selfhosted) (services) | ECS Fargate cluster, Aurora PostgreSQL, S3 buckets, KMS keys, ECR, VPC, ALB/NLB | [ECS Guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-ecs) |
-| Google GKE | [terraform-google-spacelift-selfhosted](https://github.com/spacelift-io/terraform-google-spacelift-selfhosted) | GKE Autopilot cluster, Cloud SQL PostgreSQL, GCS buckets, Artifact Registry, VPC | [GKE Guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke) |
-| Azure AKS | [terraform-azure-spacelift-selfhosted](https://github.com/spacelift-io/terraform-azure-spacelift-selfhosted) | AKS cluster, PostgreSQL Flexible Server, Azure Blob containers, Container Registry, VNet | [AKS Guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks) |
+| AWS EKS | [terraform-aws-eks-spacelift-selfhosted](https://github.com/spacelift-io/terraform-aws-eks-spacelift-selfhosted) | EKS cluster, Aurora PostgreSQL, S3 buckets, KMS keys, ECR, VPC, ALB/NLB | [EKS Guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks) 🚀 |
+| AWS ECS | [terraform-aws-spacelift-selfhosted](https://github.com/spacelift-io/terraform-aws-spacelift-selfhosted) (infra) + [terraform-aws-ecs-spacelift-selfhosted](https://github.com/spacelift-io/terraform-aws-ecs-spacelift-selfhosted) (services) | ECS Fargate cluster, Aurora PostgreSQL, S3 buckets, KMS keys, ECR, VPC, ALB/NLB | [ECS Guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-ecs) 🚀 |
+| Google GKE | [terraform-google-spacelift-selfhosted](https://github.com/spacelift-io/terraform-google-spacelift-selfhosted) | GKE Autopilot cluster, Cloud SQL PostgreSQL, GCS buckets, Artifact Registry, VPC | [GKE Guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke) 🚀 |
+| Azure AKS | [terraform-azure-spacelift-selfhosted](https://github.com/spacelift-io/terraform-azure-spacelift-selfhosted) | AKS cluster, PostgreSQL Flexible Server, Azure Blob containers, Container Registry, VNet | [AKS Guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks) 🚀 |
 
 **Common Terraform module outputs:**
 
@@ -403,7 +405,7 @@ Each platform has a Terraform module that deploys:
 
 ### Setup Container Registry and Push Images
 
-[Container Registries](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/networking#container-registries)
+[Container Registries](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/networking#container-registries) 🚀
 
 Spacelift requires two container images from the installation archive:
 
@@ -424,9 +426,9 @@ Spacelift requires two container images from the installation archive:
 
 | Platform | Registry | Login Command | Push Docs |
 |----------|----------|---------------|-----------|
-| AWS | Amazon ECR | `aws ecr get-login-password --region $REGION \| docker login --username AWS --password-stdin $ECR_URL` | [EKS: Push Images](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks#push-images-to-elastic-container-registry) |
-| GCP | Artifact Registry | `gcloud auth configure-docker $REGION-docker.pkg.dev` | [GKE: Push Images](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke#push-images-to-artifact-registry) |
-| Azure | Azure Container Registry | `az acr login --name $REGISTRY_NAME` | [AKS: Push Images](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks#push-images-to-container-registry) |
+| AWS | Amazon ECR | `aws ecr get-login-password --region $REGION \| docker login --username AWS --password-stdin $ECR_URL` | [EKS: Push Images](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks#push-images-to-elastic-container-registry) 🚀 |
+| GCP | Artifact Registry | `gcloud auth configure-docker $REGION-docker.pkg.dev` | [GKE: Push Images](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke#push-images-to-artifact-registry) 🚀 |
+| Azure | Azure Container Registry | `az acr login --name $REGISTRY_NAME` | [AKS: Push Images](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks#push-images-to-container-registry) 🚀 |
 
 ---
 
@@ -453,18 +455,18 @@ az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER_NAME
 kubectl create namespace spacelift
 ```
 
-- [EKS namespace setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks#create-kubernetes-namespace)
-- [GKE namespace setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke#create-kubernetes-namespace)
-- [AKS namespace setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks#create-kubernetes-namespace)
+- [EKS namespace setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks#create-kubernetes-namespace) 🚀
+- [GKE namespace setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke#create-kubernetes-namespace) 🚀
+- [AKS namespace setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks#create-kubernetes-namespace) 🚀
 
 #### Install ingress controller
 
 | Platform | Ingress Controller | Docs |
 |----------|-------------------|------|
-| EKS | AWS Load Balancer Controller (installed by EKS Auto) | [EKS IngressClass setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks#create-ingressclass) |
-| GKE | GKE built-in ingress (Gateway API) | [GKE ingress setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke) |
-| AKS | NGINX Ingress Controller | [AKS NGINX setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks#nginx-controller) |
-| On-prem | NGINX Ingress Controller or Traefik | [On-prem guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-onprem) |
+| EKS | AWS Load Balancer Controller (installed by EKS Auto) | [EKS IngressClass setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks#create-ingressclass) 🚀 |
+| GKE | GKE built-in ingress (Gateway API) | [GKE ingress setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke) 🚀 |
+| AKS | NGINX Ingress Controller | [AKS NGINX setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks#nginx-controller) 🚀 |
+| On-prem | NGINX Ingress Controller or Traefik | [On-prem guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-onprem) 🚀 |
 
 #### Install cert-manager (if using Let's Encrypt)
 
@@ -477,9 +479,9 @@ helm upgrade --install cert-manager jetstack/cert-manager \
   --version v1.16.2 --set crds.enabled=true
 ```
 
-- [cert-manager installation](https://cert-manager.io/docs/installation/)
-- [GKE cert-manager setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke#cert-manager)
-- [AKS cert-manager setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks#cert-manager)
+- [cert-manager installation](https://cert-manager.io/docs/installation/) 🔗
+- [GKE cert-manager setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke#cert-manager) 🚀
+- [AKS cert-manager setup](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks#cert-manager) 🚀
 
 #### Create ClusterIssuer (for Let's Encrypt)
 
@@ -500,7 +502,7 @@ spec:
             ingressClassName: nginx  # or appropriate class
 ```
 
-[ACME configuration](https://cert-manager.io/docs/configuration/acme/)
+[ACME configuration](https://cert-manager.io/docs/configuration/acme/) 🔗
 
 #### Create Kubernetes secrets
 
@@ -518,13 +520,13 @@ This creates secrets containing:
 - Admin credentials
 - Object storage configuration
 
-- [EKS secrets](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks#create-secrets)
-- [GKE secrets](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke#create-secrets)
-- [AKS secrets](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks#create-secrets)
+- [EKS secrets](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks#create-secrets) 🚀
+- [GKE secrets](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke#create-secrets) 🚀
+- [AKS secrets](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks#create-secrets) 🚀
 
 #### Deploy via Helm chart
 
-[Spacelift Helm chart](https://downloads.spacelift.io/helm)
+[Spacelift Helm chart](https://downloads.spacelift.io/helm) 🚀
 
 ```bash
 # Generate values file from Terraform output
@@ -544,15 +546,15 @@ helm upgrade --repo https://downloads.spacelift.io/helm \
 kubectl logs -n spacelift deployments/spacelift-server -f
 ```
 
-- [EKS Helm deploy](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks#deploy-application)
-- [GKE Helm deploy](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke#deploy-application)
-- [AKS Helm deploy](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks#deploy-application)
+- [EKS Helm deploy](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks#deploy-application) 🚀
+- [GKE Helm deploy](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke#deploy-application) 🚀
+- [AKS Helm deploy](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks#deploy-application) 🚀
 
 ---
 
 ### ECS Deployment
 
-[Deploying to ECS](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-ecs)
+[Deploying to ECS](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-ecs) 🚀
 
 For ECS, the services are deployed via the Terraform module rather than Helm:
 
@@ -566,15 +568,15 @@ export TF_VAR_deploy_services=true
 tofu apply
 ```
 
-[ECS deployment guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-ecs#deploy-spacelift)
+[ECS deployment guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-ecs#deploy-spacelift) 🚀
 
 ---
 
 ## Phase 5: DNS Configuration
 
-- [EKS DNS](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks#configure-your-dns-zone)
-- [GKE DNS](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke#configure-your-dns-zone)
-- [AKS DNS](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks#configure-your-dns-zone)
+- [EKS DNS](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks#configure-your-dns-zone) 🚀
+- [GKE DNS](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke#configure-your-dns-zone) 🚀
+- [AKS DNS](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks#configure-your-dns-zone) 🚀
 
 After deployment, create DNS records pointing to your load balancers.
 
@@ -606,11 +608,11 @@ spacelift.example.com    AAAA  ${PUBLIC_IPV6_ADDRESS}
 
 ## Phase 6: First Setup
 
-[First Setup Guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/first-setup)
+[First Setup Guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/first-setup) 🚀
 
 ### Login with admin credentials
 
-[Admin Login](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/first-setup#logging-in-using-admin-credentials)
+[Admin Login](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/first-setup#logging-in-using-admin-credentials) 🚀
 
 Navigate to `https://your-server-hostname` (e.g., `https://spacelift.example.com`).
 
@@ -621,13 +623,13 @@ You'll be redirected to the admin login screen. Use the credentials configured d
 
 **Direct admin login URL:** `https://your-server-hostname/admin-login`
 
-[Admin login configuration](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/general-configuration#admin-login)
+[Admin login configuration](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/general-configuration#admin-login) 🚀
 
 ---
 
 ### Create account
 
-[Creating an Account](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/first-setup#creating-an-account)
+[Creating an Account](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/first-setup#creating-an-account) 🚀
 
 After logging in, choose an account name. This is used for:
 
@@ -647,7 +649,7 @@ After logging in, choose an account name. This is used for:
 
 ### Configure SSO/IdP (optional)
 
-[Login Policy](https://docs.spacelift.io/self-hosted/latest/concepts/policy/login-policy)
+[Login Policy](https://docs.spacelift.io/self-hosted/latest/concepts/policy/login-policy) 🚀
 
 Spacelift supports SSO via:
 
@@ -662,7 +664,7 @@ Configure in **Settings > Single Sign-On** after initial setup.
 
 ### Setup VCS integration
 
-[Source Control Integrations](https://docs.spacelift.io/self-hosted/latest/integrations/source-control)
+[Source Control Integrations](https://docs.spacelift.io/self-hosted/latest/integrations/source-control) 🚀
 
 Connect Spacelift to your source control system to:
 
@@ -673,25 +675,25 @@ Connect Spacelift to your source control system to:
 
 | VCS Provider | Setup Guide |
 |--------------|-------------|
-| GitHub (Cloud or Enterprise) | [GitHub Integration](https://docs.spacelift.io/self-hosted/latest/integrations/source-control/github) |
-| GitLab (Cloud or Self-Managed) | [GitLab Integration](https://docs.spacelift.io/self-hosted/latest/integrations/source-control/gitlab) |
-| Bitbucket Cloud | [Bitbucket Cloud Integration](https://docs.spacelift.io/self-hosted/latest/integrations/source-control/bitbucket-cloud) |
-| Bitbucket Datacenter/Server | [Bitbucket Datacenter Integration](https://docs.spacelift.io/self-hosted/latest/integrations/source-control/bitbucket-datacenter-server) |
-| Azure DevOps | [Azure DevOps Integration](https://docs.spacelift.io/self-hosted/latest/integrations/source-control/azure-devops) |
-| Raw Git (any Git server) | [Raw Git Integration](https://docs.spacelift.io/self-hosted/latest/integrations/source-control/raw-git) |
+| GitHub (Cloud or Enterprise) | [GitHub Integration](https://docs.spacelift.io/self-hosted/latest/integrations/source-control/github) 🚀 |
+| GitLab (Cloud or Self-Managed) | [GitLab Integration](https://docs.spacelift.io/self-hosted/latest/integrations/source-control/gitlab) 🚀 |
+| Bitbucket Cloud | [Bitbucket Cloud Integration](https://docs.spacelift.io/self-hosted/latest/integrations/source-control/bitbucket-cloud) 🚀 |
+| Bitbucket Datacenter/Server | [Bitbucket Datacenter Integration](https://docs.spacelift.io/self-hosted/latest/integrations/source-control/bitbucket-datacenter-server) 🚀 |
+| Azure DevOps | [Azure DevOps Integration](https://docs.spacelift.io/self-hosted/latest/integrations/source-control/azure-devops) 🚀 |
+| Raw Git (any Git server) | [Raw Git Integration](https://docs.spacelift.io/self-hosted/latest/integrations/source-control/raw-git) 🚀 |
 
 ---
 
 ### Create worker pool
 
-[Worker Pools Overview](https://docs.spacelift.io/self-hosted/latest/concepts/worker-pools)
+[Worker Pools Overview](https://docs.spacelift.io/self-hosted/latest/concepts/worker-pools) 🚀
 
 Workers execute your infrastructure-as-code runs. You need at least one worker pool before creating stacks.
 
 | Worker Type | Best For | Setup Guide |
 |-------------|----------|-------------|
-| **Kubernetes Workers** | Kubernetes deployments (EKS/GKE/AKS) - workers run as pods | [Kubernetes Workers](https://docs.spacelift.io/self-hosted/latest/concepts/worker-pools/kubernetes-workers) |
-| **Docker-based Workers** | EC2/VM deployments - workers run in Docker on instances | [Docker Workers](https://docs.spacelift.io/self-hosted/latest/concepts/worker-pools/docker-based-workers) |
+| **Kubernetes Workers** | Kubernetes deployments (EKS/GKE/AKS) - workers run as pods | [Kubernetes Workers](https://docs.spacelift.io/self-hosted/latest/concepts/worker-pools/kubernetes-workers) 🚀 |
+| **Docker-based Workers** | EC2/VM deployments - workers run in Docker on instances | [Docker Workers](https://docs.spacelift.io/self-hosted/latest/concepts/worker-pools/docker-based-workers) 🚀 |
 
 **Kubernetes worker setup:**
 
@@ -700,13 +702,13 @@ Workers execute your infrastructure-as-code runs. You need at least one worker p
 3. Create K8s secret with worker pool credentials
 4. Deploy the WorkerPool CRD
 
-> **Important:** Configure resource limits on WorkerPools to prevent unbounded resource requests. See [Run Pods configuration](https://docs.spacelift.io/self-hosted/latest/concepts/worker-pools/kubernetes-workers#run-pods).
+> **Important:** Configure resource limits on WorkerPools to prevent unbounded resource requests. See [Run Pods configuration](https://docs.spacelift.io/self-hosted/latest/concepts/worker-pools/kubernetes-workers#run-pods) 🚀.
 
 ---
 
 ### Disable admin login (optional)
 
-[Admin Login Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/general-configuration#admin-login)
+[Admin Login Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/general-configuration#admin-login) 🚀
 
 After configuring SSO, you can disable admin login by removing the `ADMIN_USERNAME` and `ADMIN_PASSWORD` environment variables from your deployment.
 
@@ -716,7 +718,7 @@ After configuring SSO, you can disable admin login by removing the `ADMIN_USERNA
 
 - [ ] **Verify Spacelift UI loads** at `https://your-server-hostname`
 - [ ] **Verify workers connect** - Check worker pool in Spacelift UI shows workers as "idle"
-- [ ] **Create test stack** - [Create a Stack](https://docs.spacelift.io/self-hosted/latest/getting-started/create-stack)
+- [ ] **Create test stack** - [Create a Stack](https://docs.spacelift.io/self-hosted/latest/getting-started/create-stack) 🚀
 - [ ] **Trigger a run** - Verify run completes successfully
 
 ---
@@ -725,53 +727,53 @@ After configuring SSO, you can disable admin login by removing the `ADMIN_USERNA
 
 ### Observability
 
-[Observability Guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/observability)
+[Observability Guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/observability) 🚀
 
 | Integration | What It Provides | Docs |
 |-------------|-----------------|------|
-| Datadog | Metrics, traces, logs | [Datadog setup](https://docs.spacelift.io/self-hosted/latest/integrations/observability/datadog) |
-| Prometheus | Metrics scraping | [Prometheus setup](https://docs.spacelift.io/self-hosted/latest/integrations/observability/prometheus) |
+| Datadog | Metrics, traces, logs | [Datadog setup](https://docs.spacelift.io/self-hosted/latest/integrations/observability/datadog) 🚀 |
+| Prometheus | Metrics scraping | [Prometheus setup](https://docs.spacelift.io/self-hosted/latest/integrations/observability/prometheus) 🚀 |
 
 ### Telemetry
 
-[Telemetry Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/telemetry)
+[Telemetry Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/telemetry) 🚀
 
 Spacelift supports distributed tracing for debugging:
 
 | Vendor | Docs |
 |--------|------|
-| Datadog APM | [Telemetry Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/telemetry) |
-| AWS X-Ray | [Telemetry Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/telemetry) |
-| OpenTelemetry | [Telemetry Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/telemetry) |
+| Datadog APM | [Telemetry Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/telemetry) 🚀 |
+| AWS X-Ray | [Telemetry Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/telemetry) 🚀 |
+| OpenTelemetry | [Telemetry Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/telemetry) 🚀 |
 
 ### Slack Integration
 
-[Slack Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/slack)
+[Slack Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/slack) 🚀
 
 Enable Slack notifications for runs, approvals, and drift detection.
 
 ### Cloud Integrations (OIDC)
 
-[Cloud Integrations](https://docs.spacelift.io/self-hosted/latest/integrations/cloud-providers)
+[Cloud Integrations](https://docs.spacelift.io/self-hosted/latest/integrations/cloud-providers) 🚀
 
 Allow Spacelift to assume roles in your cloud accounts without static credentials:
 
 | Cloud | Docs |
 |-------|------|
-| AWS | [AWS OIDC Integration](https://docs.spacelift.io/self-hosted/latest/integrations/cloud-providers/oidc/aws-oidc) |
-| GCP | [GCP OIDC Integration](https://docs.spacelift.io/self-hosted/latest/integrations/cloud-providers/oidc/gcp-oidc) |
-| Azure | [Azure OIDC Integration](https://docs.spacelift.io/self-hosted/latest/integrations/cloud-providers/oidc/azure-oidc) |
-| HashiCorp Vault | [Vault OIDC Integration](https://docs.spacelift.io/self-hosted/latest/integrations/cloud-providers/oidc/vault-oidc) |
+| AWS | [AWS OIDC Integration](https://docs.spacelift.io/self-hosted/latest/integrations/cloud-providers/oidc/aws-oidc) 🚀 |
+| GCP | [GCP OIDC Integration](https://docs.spacelift.io/self-hosted/latest/integrations/cloud-providers/oidc/gcp-oidc) 🚀 |
+| Azure | [Azure OIDC Integration](https://docs.spacelift.io/self-hosted/latest/integrations/cloud-providers/oidc/azure-oidc) 🚀 |
+| HashiCorp Vault | [Vault OIDC Integration](https://docs.spacelift.io/self-hosted/latest/integrations/cloud-providers/oidc/vault-oidc) 🚀 |
 
 ### Usage Reporting
 
-[Usage Reporting Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/usage-reporting)
+[Usage Reporting Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/usage-reporting) 🚀
 
 Report usage data to Spacelift for license compliance. Can be automatic or manual export.
 
 ### Disaster Recovery
 
-[Disaster Recovery Guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/disaster-recovery)
+[Disaster Recovery Guide](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/disaster-recovery) 🚀
 
 Plan for database backups, state recovery, and failover procedures.
 
@@ -783,20 +785,20 @@ Plan for database backups, state recovery, and failover procedures.
 
 | Platform | Deployment Guide | Terraform Module |
 |----------|-----------------|------------------|
-| AWS EKS | [Deploying to EKS](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks) | [terraform-aws-eks-spacelift-selfhosted](https://github.com/spacelift-io/terraform-aws-eks-spacelift-selfhosted) |
-| AWS ECS | [Deploying to ECS](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-ecs) | [terraform-aws-ecs-spacelift-selfhosted](https://github.com/spacelift-io/terraform-aws-ecs-spacelift-selfhosted) |
-| Google GKE | [Deploying to GKE](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke) | [terraform-google-spacelift-selfhosted](https://github.com/spacelift-io/terraform-google-spacelift-selfhosted) |
-| Azure AKS | [Deploying to AKS](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks) | [terraform-azure-spacelift-selfhosted](https://github.com/spacelift-io/terraform-azure-spacelift-selfhosted) |
-| On-Prem K8s | [Deploying to on-prem](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-onprem) | - |
-| Air-gapped | [Air-gapped environments](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/air-gapped) | - |
+| AWS EKS | [Deploying to EKS](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-eks) 🚀 | [terraform-aws-eks-spacelift-selfhosted](https://github.com/spacelift-io/terraform-aws-eks-spacelift-selfhosted) |
+| AWS ECS | [Deploying to ECS](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-ecs) 🚀 | [terraform-aws-ecs-spacelift-selfhosted](https://github.com/spacelift-io/terraform-aws-ecs-spacelift-selfhosted) |
+| Google GKE | [Deploying to GKE](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-gke) 🚀 | [terraform-google-spacelift-selfhosted](https://github.com/spacelift-io/terraform-google-spacelift-selfhosted) |
+| Azure AKS | [Deploying to AKS](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-aks) 🚀 | [terraform-azure-spacelift-selfhosted](https://github.com/spacelift-io/terraform-azure-spacelift-selfhosted) |
+| On-Prem K8s | [Deploying to on-prem](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/deploying-to-onprem) 🚀 | - |
+| Air-gapped | [Air-gapped environments](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/air-gapped) 🚀 | - |
 
 ### Configuration Reference
 
 | Topic | Reference |
 |-------|-----------|
-| General configuration | [General Configuration](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/general-configuration) |
-| Encryption | [Encryption Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/encryption) |
-| Message queues | [Message Queues Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/message-queues) |
-| MQTT broker | [MQTT Broker Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/mqtt-broker) |
-| Networking | [Networking Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/networking) |
-| Object storage | [Object Storage Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/object-storage) |
+| General configuration | [General Configuration](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/general-configuration) 🚀 |
+| Encryption | [Encryption Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/encryption) 🚀 |
+| Message queues | [Message Queues Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/message-queues) 🚀 |
+| MQTT broker | [MQTT Broker Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/mqtt-broker) 🚀 |
+| Networking | [Networking Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/networking) 🚀 |
+| Object storage | [Object Storage Reference](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/reference/object-storage) 🚀 |
