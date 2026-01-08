@@ -7,7 +7,7 @@
 
 ---
 
-## 📋 Installation Tracker
+## Installation Tracker
 
 Use this checklist to track your progress. Click the links to jump to detailed instructions for each step.
 
@@ -84,7 +84,7 @@ Contact your Spacelift sales representative to receive:
     *   `spacelift-launcher` container image
     *   `spacelift-launcher` binary (for non-Kubernetes workers)
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
@@ -107,7 +107,7 @@ Spacelift requires two hostnames to operate:
 > *   If workers run in the same Kubernetes cluster, use internal K8s DNS (e.g., `spacelift-mqtt.spacelift.svc.cluster.local`).
 > *   Default port: `1984` (configurable).
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
@@ -145,7 +145,7 @@ The TLS certificate secures HTTPS access to the Spacelift server and must be val
 
 </details>
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
@@ -164,7 +164,7 @@ Spacelift stores all application data (accounts, stacks, history, secrets) in Po
 *   **Port:** `5432` (default)
 
 <details>
-<summary><strong>📚 Supported Versions Table</strong></summary>
+<summary><strong>Supported Versions Table</strong></summary>
 
 | Version | Status |
 | :--- | :--- |
@@ -195,7 +195,7 @@ Spacelift stores all application data (accounts, stacks, history, secrets) in Po
 > *   **AKS:** Creates PostgreSQL Flexible Server
 > *   *Set to `false` to bring your own database.*
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
@@ -227,7 +227,7 @@ Used to persist logs, state files, policy inputs, workspace data, artifacts, and
 *   `workspace`
 </details>
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
@@ -255,7 +255,7 @@ Encrypts sensitive data (secrets, tokens, keys) in the database and signs JWT to
     ```
     Pass as `ENCRYPTION_RSA_PRIVATE_KEY`. **Keep this key secure.**
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
@@ -270,7 +270,7 @@ Handles async job processing (webhooks, scheduling, policies).
 | **Built-in (PostgreSQL)** | ✅ **Recommended** for new installs. No extra infra. | `MESSAGE_QUEUE_TYPE=builtin` (default) |
 | **AWS SQS** | Existing installs or managed preference. Required for IoT Core. | `MESSAGE_QUEUE_TYPE=sqs` + queue URLs |
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
@@ -285,7 +285,7 @@ Enables "push" communication from server to workers (scheduling, cancellations, 
 | **Built-in** | ✅ **Recommended**. Runs on port `1984` inside server. | `MQTT_BROKER_TYPE=builtin` (default) |
 | **AWS IoT Core** | Large-scale AWS deployments. **Requires SQS**. | `MQTT_BROKER_TYPE=iot-core` + endpoint |
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
@@ -332,7 +332,7 @@ Spacelift is composed of **Server**, **Drain**, **Scheduler**, and **Workers**.
 - [ ] Network Load Balancer (MQTT, if external workers)
 - [ ] Security Groups / Firewall Rules
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
@@ -353,7 +353,7 @@ Use the official Terraform modules to deploy clusters, databases, storage, keys,
 *   `helm_values`: `values.yaml` for Helm
 *   Connection strings, bucket names, ARNs
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
@@ -390,7 +390,7 @@ docker push your-registry/spacelift-backend:v3.0.0
 
 </details>
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
@@ -482,7 +482,7 @@ helm upgrade --repo https://downloads.spacelift.io/helm \
 kubectl logs -n spacelift deployments/spacelift-server -f
 ```
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
@@ -502,7 +502,7 @@ export TF_VAR_deploy_services=true
 tofu apply
 ```
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
@@ -528,7 +528,7 @@ kubectl get service spacelift-mqtt -n spacelift
 
 > **Note for GKE:** You may need A (IPv4) and AAAA (IPv6) records if provided an IP instead of a hostname.
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
@@ -563,7 +563,7 @@ You need at least one worker pool to run stacks.
 ### Disable Admin Login (Highly Recommended)
 Once SSO is working, **remove** `ADMIN_USERNAME` and `ADMIN_PASSWORD` variables from your deployment to close this security vector.
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
@@ -574,7 +574,7 @@ Once SSO is working, **remove** `ADMIN_USERNAME` and `ADMIN_PASSWORD` variables 
 - [ ] **Create test stack** ([Guide](https://docs.spacelift.io/self-hosted/latest/getting-started/create-stack) 🚀)
 - [ ] **Trigger a run** (Verify success)
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
@@ -609,7 +609,7 @@ Allow Spacelift to assume roles (AWS/GCP/Azure/Vault) without static credentials
 *   [Disaster Recovery](https://docs.spacelift.io/self-hosted/latest/installing-spacelift/reference-architecture/guides/disaster-recovery) 🚀
 </details>
 
-[⬆️ Back to Checklist](#-installation-tracker)
+[Back to Checklist](#installation-tracker)
 
 ---
 
